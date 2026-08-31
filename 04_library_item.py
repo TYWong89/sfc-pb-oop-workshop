@@ -88,3 +88,23 @@ Example:
    print(dvd.get_info())    # Prints DVD information
 
 """
+class LibraryItem:
+    def __init__(self, title, publication_date, identifier):
+        self.title = title
+        self.publication_date = publication_date
+        self.identifier = identifier
+    def get_info(self):
+        return  (
+        f"Title: {self.title}, "
+        f"Publication Date: {self.publication_date}, "
+        f"Identifier: {self.identifier}"
+    )
+
+class Book(LibraryItem):
+    def __init__(self, title, publication_date, identifier,author, pages):
+        super.__init__(title, publication_date, identifier,)
+        self.author = author
+        self.pages = pages
+
+    def get_info(self):
+        return
